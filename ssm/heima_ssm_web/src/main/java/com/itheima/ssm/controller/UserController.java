@@ -2,6 +2,7 @@ package com.itheima.ssm.controller;
 
 import com.itheima.ssm.domain.UserInfo;
 import com.itheima.ssm.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
     private IUserService userService;
 
     @RequestMapping("/findAll.do")

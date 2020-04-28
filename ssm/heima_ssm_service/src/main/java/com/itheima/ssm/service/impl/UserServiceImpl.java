@@ -39,7 +39,7 @@ public class UserServiceImpl implements IUserService {
     //作用就是返回一个List集合，集合中装入的是角色描述
     public List<SimpleGrantedAuthority> getAuthority(List<Role> roles) {
 
-        List<SimpleGrantedAuthority> list = new ArrayList<>();
+        List<SimpleGrantedAuthority> list = new ArrayList<SimpleGrantedAuthority>();
         for (Role role : roles) {
             list.add(new SimpleGrantedAuthority("ROLE_" + role.getRoleName()));
         }
